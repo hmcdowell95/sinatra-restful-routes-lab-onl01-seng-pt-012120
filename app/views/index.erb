@@ -1,0 +1,16 @@
+<html>
+  <title>Welcome to my list of recipes!</title>
+  <p>To view a recipe click on it's link</p>
+  <p>To create a recipe click the link below</p>
+  <a href="/recipes/new">New recipe</a>
+  <br>
+  <h1>Recipes</h1>
+  <body>
+  <ul>
+  <% @recipes.each do |x| %>
+    <li><%= x.name %></li>
+    <a href="/recipes/<%=x.id%>">click here</a>
+  <% end %>
+  </ul>
+  </body>
+</html>
