@@ -35,7 +35,6 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/recipes/:id' do
-    binding.pry
     @recipe = Recipe.find(params[:id])
     @recipe.update(params)
     erb :show
