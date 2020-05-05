@@ -19,8 +19,9 @@ class ApplicationController < Sinatra::Base
     if @recipe
       @id = @recipe.id
       redirect "/recipes/#{@id}"
+    else
+      redirect "/recipes/new"
     end
-    redirect "/recipes/new"
   end
   
   get '/recipes/:id' do 
